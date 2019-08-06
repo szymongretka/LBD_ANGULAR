@@ -4,7 +4,7 @@
     <div class="row" *ngFor="let expense of expenses">
       <div class="col-md-3">
         <ul class="list-group">
-          <a href="#" (click)="onSelectedExpense(expense)">     
+          <a routerLink="" (click)="onSelectedExpense(expense)">     
             {{expense.name}},
             {{expense.amount}} PLN 
           </a>

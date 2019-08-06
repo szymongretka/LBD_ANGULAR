@@ -11,14 +11,16 @@ export class ExpenseComponent implements OnInit {
 
   expenses: Expense[];
   selectedExpense: Expense;
-  expenseService: ExpenseService = new ExpenseService;
+  expenseService: ExpenseService;
   onSelectedExpense(expense: Expense): void {
     this.selectedExpense = expense;
   }
   //expense1: Expense = new Expense("my name isss", 200);
 
 
-  constructor() { }
+  constructor(expeseService: ExpenseService) { 
+    this.expenseService = expeseService;
+  }
 
   ngOnInit() {
     this.expenses = this.expenseService.getExpenses();
